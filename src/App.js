@@ -1,10 +1,11 @@
 
 import './App.css';
+import Residences from "./components/Residences";
 
 function App() {
   return (
     <div>
-     hello world
+     <Residences/>
     </div>
   );
 }
