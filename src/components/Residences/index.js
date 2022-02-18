@@ -63,6 +63,7 @@ const Residences = () => {
                  <button onClick={Variant4Click}>DUPLEX PENTHOUSE</button>
              </div>
              <div className="box">
+
                  {  variant1 == true ?
                  <Container>
                      <Row>
