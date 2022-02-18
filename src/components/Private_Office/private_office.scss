@@ -1,0 +1,51 @@
+
+
+
+
+.private-office {
+  padding: 15px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  .office-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      width: 80%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+    h3 {
+      padding: 15px 32px;
+      margin-top: 10%;
+      padding-right: 20%;
+      font-size: 30px;
+    }
+  }
+  .route-links {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    button {
+      color: white;
+      padding: 15px 32px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: transparent;
+    }
+  }
+  .overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+  }
+}
