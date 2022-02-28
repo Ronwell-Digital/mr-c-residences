@@ -1,7 +1,8 @@
 import "./App.css";
+import PaymentTerms from "./Components/Payment Terms/PaymentTerms";
 
 function App() {
-  return <div>hello world</div>;
+  return <div><PaymentTerms/></div>;
 }
 
 export default App;
