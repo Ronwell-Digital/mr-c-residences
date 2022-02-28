@@ -1,5 +1,6 @@
 import React from 'react';
 import './PaymentTerms.scss';
+import bottomContainer from '../../assets/images/Group 8.jpg';
 
 const PaymentTerms = () => {
     return (
@@ -104,6 +105,9 @@ const PaymentTerms = () => {
             <div className="timeline-end">Expected Completion <br/>Q4 2023</div>
             <div className="download-brochure"><p>You can download here <br/>availability & pricing brochure</p>
                 <button>Download</button>
+            </div>
+            <div className="bottom-container">
+                <img src={bottomContainer}></img>
             </div>
         </div>
     );
