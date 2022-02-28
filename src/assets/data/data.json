@@ -1,0 +1,16 @@
+
+const cards = [
+  {
+    "id": 1,
+    "title": "first title",
+    "description":"first descript",
+    "image": "../../assets/images/card1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "second title",
+    "description":"second descript",
+    "image":"../../assets/images/card2.jpg"
+  },
+
+];
