@@ -1,0 +1,44 @@
+
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .gallery__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.5em;
+    text-align: center;
+    font-weight: 700;
+    color: #CFA87A;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #CFA87A;
+    margin-top: 10px;
+  }
+  .row-1 {
+    display: flex;
+    img {
+      background: rgba(0, 0, 0, 0.4);
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+  }
+  .row-2 img {
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  .row-3 {
+    display: flex;
+    img {
+      background: rgba(0, 0, 0, 0.4);
+      margin-right: 10px;
+      border-radius: 8px;
+      margin-bottom: 50px;
+    }
+  }
+}
