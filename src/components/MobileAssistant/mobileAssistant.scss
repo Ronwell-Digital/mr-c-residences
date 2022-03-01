@@ -1,0 +1,65 @@
+.mobile-assistant {
+  padding: 150px 0;
+  .mobile-assistant-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.5em;
+
+    color: #cfa87a;
+    text-transform: uppercase;
+  }
+  .mobile-assistant-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 120px;
+  }
+  .mobile-assistant-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .mobile-assistant-content-item-image {
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+  }
+  .mobile-assistant-content-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    //flex: 1;
+  }
+  .mobile-assistant-content-item-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    width: 250px;
+    text-align: center;
+    line-height: 44px;
+    max-height: 88px;
+    text-align: center;
+
+    color: #452129;
+    margin: 20px 0;
+  }
+  .mobile-assistant-content-item-description {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+
+    color: #a7a3a4;
+  }
+}

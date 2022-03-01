@@ -1,0 +1,73 @@
+@import "../../assets/cssHelpers/variables";
+.header {
+  padding: 3rem 0;
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .brand-logo-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    .brand-logo {
+      display: block;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+  .nav-item {
+    padding: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.12em;
+
+    color: #ffffff;
+    text-transform: uppercase;
+
+    .nav-title {
+      text-decoration: inherit;
+      color: #ffffff;
+    }
+    &:after {
+      display: block;
+      content: "";
+      border-bottom: solid 2px #cfa87a;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+    }
+  }
+  .btn {
+    background: #cfa87a;
+    box-shadow: 0px 20px 19px -13px rgba(207, 168, 122, 0.4);
+    border-radius: 8px;
+    padding: 0 1rem;
+    margin-left: 48px;
+    transition: all 0.4s ease-in-out;
+    span {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+      text-align: center;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
