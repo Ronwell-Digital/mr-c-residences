@@ -111,7 +111,27 @@
   input:focus {
     outline: none;
   }
+  .row5 {
+    margin-top: 2%;
+  }
+  .brochures {
+    display: flex;
+    justify-content: center;
+  }
+  .download-btn {
+    width: 160px;
+    height: 55px;
+    padding: 15px 32px;
+    background: #CFA87A;
+    box-shadow: 0px 20px 19px -13px rgba(207, 168, 122, 0.4);
+    border-radius: 8px;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    text-decoration: none;
+  }
 }
+
 
 @media screen and (max-width: 900px){
   .contact {
@@ -164,23 +184,29 @@
       flex-direction: column;
     }
     input {
-      margin-left: 5%;
+      margin-left: 3%;
     }
   }
   #adress {
     margin-left: 8%;
   }
   #button {
-    margin-left: 25%;
+    margin-left: 20%;
     margin-bottom: 5%;
   }
   h5 {
-    margin-left: -70px;
+    margin-left: -80px;
   }
   #email {
     margin-left: -120px;
   }
   #number {
     margin-left: -40px;
+  }
+  .brochures {
+    flex-wrap: wrap;
+  }
+  .download-btn {
+    margin-top: 10px;
   }
 }
