@@ -1,5 +1,6 @@
 import HomePattern from "../../assets/svgs/HomePattern";
 import MrcMan from "../../assets/svgs/MrcMan";
+import LeftContainer from "../LeftContainer";
 import "./about.scss";
 export default function About() {
   return (

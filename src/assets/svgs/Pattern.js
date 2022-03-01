@@ -7,6 +7,7 @@ export default function Pattern() {
         height="769"
         viewBox="0 0 1920 769"
         fill="none"
+        style={{ width: "100%" }}
         xmlns="http://www.w3.org/2000/svg"
       >
         <g opacity="0.4">
