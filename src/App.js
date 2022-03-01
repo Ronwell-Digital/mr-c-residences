@@ -9,15 +9,14 @@ import WhatTheyDo from "./components/WhatTheyDo";
 function App() {
   return (
     <div>
-      <Hero>
-        <Header />
-      </Hero>
-      <WhatTheyDo />
-      <DownloadBrochure />
-      <MobileAssistant />
+      <Header />
+      <Hero></Hero>
+      {/* <WhatTheyDo /> */}
+      {/* <DownloadBrochure /> */}
+      {/* <MobileAssistant /> */}
       <Divider />
-      <FloorPlans />
-      <DownloadBrochure />
+      {/* <FloorPlans /> */}
+      {/* <DownloadBrochure /> */}
     </div>
   );
 }

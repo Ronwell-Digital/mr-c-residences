@@ -11,7 +11,6 @@ export default function Hero({ children }) {
         backgroundImage: `linear-gradient(0deg, #452129 50%, rgba(69, 33, 41, 0) 92.75%), url(${heroimage}) `,
       }}
     >
-      <Header />
       <div className="hero-content">
         <p className="hero-text">
           Discover <br />
@@ -19,8 +18,8 @@ export default function Hero({ children }) {
           private office.
         </p>
       </div>
-      <Pattern />
-      <About />
+      {/* <Pattern /> */}
+      {/* <About /> */}
     </div>
   );
 }

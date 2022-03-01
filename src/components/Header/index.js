@@ -1,7 +1,38 @@
+import { useEffect } from "react";
 import Logo from "../../assets/brandlogo/logo";
+import Instagram from "../../assets/svgs/Instagram";
 import Container from "../Container";
 import "./header.scss";
+import MrcMan from "../../assets/svgs/biggerMrc.svg";
+let timeout;
 export default function Header() {
+  useEffect(() => {
+    window.onscroll = () => {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+      timeout = setTimeout(() => {
+        if (window.scrollY > 10) {
+          document.querySelector(".header").classList.add("sticky");
+        } else {
+          document.querySelector(".header").classList.remove("sticky");
+        }
+      }, 10);
+    };
+  }, []);
+  useEffect(() => {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+
+      nav.classList.toggle("active");
+      nav.style.backgroundImage = `url(${MrcMan})`;
+    }
+
+    hamburger.addEventListener("click", mobileMenu);
+  }, []);
   return (
     <header className="header">
       <Container>
@@ -12,6 +43,9 @@ export default function Header() {
             </a>
           </div>
           <nav className="nav">
+            <div className="brand-logo-wrapper-inner ">
+              <Logo />
+            </div>
             <ul className="nav-list">
               {headerNav.map((item, index) => {
                 return (
@@ -24,7 +58,14 @@ export default function Header() {
             <button className="btn">
               <span>BROCHURE</span>
             </button>
+            <Instagram className="instagram" />
           </nav>
+
+          <div className="hamburger">
+            <span className="bar bar-1"></span>
+            <span className="bar bar-2"></span>
+            <span className="bar bar-3"></span>
+          </div>
         </div>
       </Container>
     </header>
