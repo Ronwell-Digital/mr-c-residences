@@ -4,13 +4,106 @@
 .inspiration {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   overflow: hidden;
+  position: relative;
+  animation: boxAnimation 2s infinite;
+  animation-direction: alternate-reverse;
+
+
+  @keyframes boxAnimation {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 100px;
+    }
+  }
+
+  .inspiration-top {
+    display: flex;
+    margin-left: 10%;
+    .card {
+      border: none;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      img {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.03%, rgba(0, 0, 0, 0.8) 100%);
+        border-radius: 8px;
+      }
+
+      h6 {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: flex-end;
+        color: #FFFFFF;
+      }
+
+      p {
+        position: absolute;
+        top: 65%;
+        left: 10%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .inspiration-bottom {
+    display: flex;
+
+    .card {
+      border: none;
+      margin-right: 10px;
+      width: 800px;
+      margin-bottom: 5%;
+      img {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.03%, rgba(0, 0, 0, 0.8) 100%);
+        border-radius: 8px;
+        width: 800px;
+      }
+
+      h6 {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: flex-end;
+        color: #FFFFFF;
+      }
+
+      p {
+        position: absolute;
+        top: 65%;
+        left: 10%;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+      }
+    }
+  }
 
   .inspiration__title {
     font-family: 'Montserrat', sans-serif;
@@ -21,57 +114,39 @@
     font-weight: 700;
     color: #CFA87A;
     margin-bottom: 1rem;
-    border-bottom: 3px solid #CFA87A;
+    border-bottom: 5px solid #CFA87A;
     margin-top: 10px;
+    margin-right: 5%;
   }
-  #top-cards {
-    margin-left: 200px;
-    animation-direction: alternate-reverse;
-  }
-  .inspiration__cards {
-    display: flex;
+}
 
-  }
-  .inspiration__card {
-    position: relative;
-    text-align: center;
-  }
-  .inspiration__card img {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.03%, rgba(0, 0, 0, 0.8) 100%);
-    border-radius: 8px;
-  }
-  .inspiration__card__info {
+
+
+@media screen and (max-width: 768px) {
+  .inspiration-top {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 36px;
-    left: 36px;
-    h5 {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 29px;
-      color: #FFFFFF;
-    }
-    p {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 17px;
-      color: #FFFFFF;
-    }
-    h6 {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 17px;
-      color: #FFFFFF;
+    flex-wrap: wrap;
+    .card {
+      img {
+        max-width: 90%;
+      }
+      h5 {
+        margin-left: 2%;
+        font-size: 12px;
+      }
+  }
+  }
+  .inspiration-bottom {
+    display: flex;
+    flex-direction: column;
+    .card {
+      img {
+        max-width: 40%;
+      }
+      h5{
+        margin-right: 10%;
+      }
     }
   }
-
 }

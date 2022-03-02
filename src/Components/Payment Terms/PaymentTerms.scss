@@ -9,56 +9,26 @@
   justify-content: center;
   align-items: center;
 
-  .payment-terms__title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    line-height: 29px;
-    letter-spacing: 0.5em;
-    text-align: center;
-    font-weight: 700;
-    color: #CFA87A;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid #CFA87A;
-    margin-top: 10px;
-  }
+
 
   .payment-terms__content {
     display: flex;
   }
 
   #conference-timeline {
-    position: relative;
-    max-width: 751px;
-    width: 100%;
-    margin: 0 auto;
+   display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .timeline-end {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    color: #CFA87A;
-  }
 
   .download-brochure {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .download-brochure p {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
-    text-align: center;
-    color: #C4C4C4;
-    margin-top: 10px;
+    position: fixed;
+    bottom: 1440px;
   }
 
   .download-brochure button {
@@ -162,7 +132,7 @@
   .timeline-article .meta-date {
     position: absolute;
     top: 0;
-    left: 55%;
+    left: 52.2%;
     width: 12px;
     height: 12px;
     margin-left: -31px;

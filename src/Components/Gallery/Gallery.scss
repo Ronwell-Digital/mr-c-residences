@@ -42,3 +42,28 @@
     }
   }
 }
+
+@media screen and (max-width: 900px) {
+  .gallery {
+    display: flex;
+    justify-content: center;
+  }
+     .row-1 {
+       display: flex;
+      img {
+        width: 48%;
+        height: 100px;
+      }
+     }
+  .row-2 img {
+    width: 98%;
+    height: 140px;
+  }
+  .row-3 {
+    display: flex;
+    img {
+      width: 48%;
+      height: 100px;
+    }
+  }
+    }
