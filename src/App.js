@@ -4,6 +4,7 @@ import Inspiration from "./Components/Inspiration/Inspiration";
 import Gallery from "./Components/Gallery/Gallery";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import BottomFooter from "./Components/Footer/BottomFooter";
 
 function App() {
   return <div>
@@ -12,6 +13,7 @@ function App() {
     <Gallery/>
     <Contact/>
     <Footer/>
+    <BottomFooter/>
   </div>;
 }
 

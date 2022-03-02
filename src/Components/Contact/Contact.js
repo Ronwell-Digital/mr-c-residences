@@ -45,7 +45,7 @@ const Contact = () => {
             <p>Fill up the form and our team will get <br/> back to you within 24 hours</p>
             {showBtn == true ? <div className="brochures">
                 <a href={brochure1}download="Peninsula Main Brochure" className="download-btn">Main</a>
-                <a href={brochure1}download="Peninsula One Brochure" className="download-btn">Private Office</a>
+                <a href={brochure2}download="Peninsula One Brochure" className="download-btn">Private Office</a>
                 <a href={brochure3}download="Peninsula Two Brochure" className="download-btn">Residences</a>
             </div> : null}
         </div>

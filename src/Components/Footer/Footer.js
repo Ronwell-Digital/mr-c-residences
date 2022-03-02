@@ -1,16 +1,18 @@
 import React from "react";
 import '../Footer/Footer.scss';
+import logo from '../../assets/images/logo.svg';
+import instagram from '../../assets/images/instagram.svg';
 
 const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-content">
                 <div className="footer-content-left">
-                    <h3 style={{textAlign:"center"}}>Mr.C REDIDENCES</h3>
+                    <img style={{marginBottom:20}} src={logo}/>
                     <p style={{textAlign:"center"}}>In 1931, on a tiny street off of Venice’s magnificent Piazza San Marco, Giuseppe Cipriani opened Harry’s Bar. In the decades that followed, its welcoming atmosphere and thoughtful attention to detail made this intimate space an iconic destination for stylish locals and international visitors, including a who’s who of European royalty, literary figures and global celebrities.</p>
                     <span style={{textAlign:"center",marginBottom:10}}>Mr. C Residences Jumeirah, St 24C, Jumeirah 2, Dubai Canal.</span>
                     <span style={{textAlign:"center"}}>+971 4 455 0830</span>
-                    <img></img>
+                    <img  style={{width:40,marginLeft:"40%",marginTop:"5%"}} src={instagram}></img>
                 </div>
                 <div className="footer-content-right">
                     <h3>Site Map</h3>
@@ -33,7 +35,7 @@ const Footer = () => {
                     </div>
                     <div className="section2">
                         <p>Download our price and availability brochure</p>
-                        <button>Download Brochure</button>
+                        <button>Download Prices</button>
                     </div>
                 </div>
                 </div>
