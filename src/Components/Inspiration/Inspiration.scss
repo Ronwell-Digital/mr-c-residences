@@ -123,13 +123,16 @@
 
 
 @media screen and (max-width: 768px) {
+  .inspiration {
+    animation: none;
+  }
   .inspiration-top {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     .card {
       img {
-        max-width: 90%;
+        max-width: 100%;
       }
       h5 {
         margin-left: 2%;
@@ -140,6 +143,7 @@
   .inspiration-bottom {
     display: flex;
     flex-direction: column;
+    margin-left: 10%;
     .card {
       img {
         max-width: 40%;

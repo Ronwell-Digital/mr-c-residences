@@ -48,11 +48,5 @@ export const cardData2 = [
         "Sainte Foy in the French Alps ",
     "description": "Global Travel",
     "image": require("../../assets/images/heli-ski.jpg"),
-  },
-  {
-    "key": 5,
-    "title": "Annabel’s London \n " + "Private Club membership" ,
-    "description": "Access and Memberships",
-    "image": require("../../assets/images/annabels.jpg"),
-  },
+  }
 ]

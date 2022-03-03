@@ -8,20 +8,45 @@ import gallery5 from '../../assets/images/gallery5.jpg'
 
 const Gallery = () => {
     return(
-        <div className="gallery">
+        <div className="gallery" id="gallery">
             <div className="gallery__title">
                 <h2>GALLERY</h2>
             </div>
             <div className="row-1">
-                <img src={gallery1}></img>
-                <img src={gallery2}></img>
+                <div className="container">
+                    <img src={gallery1} alt="gallery" className="image"  />
+                    <div className="middle">
+                        <div className="text">View Image</div>
+                    </div>
+                </div>
+                <div className="container">
+                <img src={gallery2} alt="gallery" className="image"  />
+                <div className="middle">
+                    <div className="text">View Image</div>
+                </div>
+            </div>
             </div>
             <div className="row-2">
-                <img src={gallery3}></img>
+                <div className="container">
+                    <img src={gallery3} alt="gallery" className="image"  />
+                    <div className="middle">
+                        <div className="text">View Image</div>
+                    </div>
+                </div>
             </div>
             <div className="row-3">
-                <img src={gallery4}></img>
-                <img src={gallery5}></img>
+                <div className="container">
+                    <img src={gallery4} alt="gallery" className="image"  />
+                    <div className="middle">
+                        <div className="text">View Image</div>
+                    </div>
+                </div>
+                <div className="container">
+                    <img src={gallery5} alt="gallery" className="image"  />
+                    <div className="middle">
+                        <div className="text">View Image</div>
+                    </div>
+                </div>
             </div>
         </div>
 

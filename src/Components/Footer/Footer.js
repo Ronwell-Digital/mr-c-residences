@@ -5,7 +5,7 @@ import instagram from '../../assets/images/instagram.svg';
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footer" id="footer">
             <div className="footer-content">
                 <div className="footer-content-left">
                     <img style={{marginBottom:20}} src={logo}/>
