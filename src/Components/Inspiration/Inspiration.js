@@ -4,7 +4,7 @@ import {cardData1,cardData2} from  '../../assets/data/data.js';
 
 const Inspiration = () => {
     return(
-        <div className="inspiration">
+        <div className="inspiration" id="inspiration">
             <div className="inspiration__title">
                 <h1>INSPIRATION</h1>
             </div>

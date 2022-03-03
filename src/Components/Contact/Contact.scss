@@ -68,12 +68,16 @@
     margin-left: 50px;
     margin-bottom: 50px;
     .box1 {
-      margin-right: 50px;
+      margin-left: 20%;
+    }
+    .box2 {
+      padding-left: 50px;
     }
     input {
       border: none;
       border-bottom: 2px solid #E5E5E5;
     }
+
     input:focus {
       outline: none;
     }
@@ -167,7 +171,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-right: 40%;
+        margin-right: 60%;
         margin-bottom: 5%;
       }
       .box2 {
@@ -176,7 +180,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-right: 40%;
+        margin-right: 10%;
+      }
+      #number {
+        margin-right: 55%;
       }
     }
     .row3 {

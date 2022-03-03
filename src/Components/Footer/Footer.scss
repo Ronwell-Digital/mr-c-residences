@@ -22,14 +22,16 @@
   }
   .footer-content-right {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex:1;
     flex-direction: column;
-    padding-right: 20%;
     h3 {
-      display: none;
+      display: flex;
     }
     ul li {
       list-style: none ;
+      margin-top: 20px;
     }
   }
   .route-links {
@@ -103,7 +105,6 @@
       color: #FFFFFF;
       text-align: center;
       margin-top: 10%;
-      margin-right: 30%;
     }
     ul li {
       list-style: none ;
