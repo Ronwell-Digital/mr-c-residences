@@ -1,0 +1,219 @@
+
+
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  .col-left {
+    margin-bottom: 10%;
+  }
+   .col-left h2 {
+     font-family: Montserrat;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 64px;
+     line-height: 78px;
+     color: #452129;
+   }
+  .col-left p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    color: #C4C4C4;
+  }
+  .contact__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.5em;
+    text-align: center;
+    font-weight: 700;
+    color: #CFA87A;
+    border-bottom: 3px solid #CFA87A;
+  }
+  .row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    .box1 {
+      margin-right: 50px;
+    }
+    h5 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #452129;
+    }
+    input {
+      border: none;
+      border-bottom: 2px solid #E5E5E5;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+  .row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    .box1 {
+      margin-left: 20%;
+    }
+    .box2 {
+      padding-left: 50px;
+    }
+    input {
+      border: none;
+      border-bottom: 2px solid #E5E5E5;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  }
+  .row3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 500px;
+      margin-left: 100px;
+    }
+    #adress {
+      margin-right: 330px;
+    }
+  }
+  .row4 {
+    margin-top: 5%;
+    button {
+      width: 237px;
+      height: 55px;
+      background: #CFA87A;
+      box-shadow: 0px 20px 19px -13px rgba(207, 168, 122, 0.4);
+      border-radius: 8px;
+      color: white;
+      border: none;
+      margin-left: 100px;
+    }
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+  }
+  input:focus {
+    outline: none;
+  }
+  .row5 {
+    margin-top: 2%;
+  }
+  .brochures {
+    display: flex;
+    justify-content: center;
+  }
+  .download-btn {
+    width: 160px;
+    height: 55px;
+    padding: 15px 32px;
+    background: #CFA87A;
+    box-shadow: 0px 20px 19px -13px rgba(207, 168, 122, 0.4);
+    border-radius: 8px;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+}
+
+
+@media screen and (max-width: 900px){
+  .contact {
+    display: flex;
+    flex-direction: column;
+    .row1 {
+      display: flex;
+      flex-direction: column;
+      .box1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40%;
+        margin-bottom: 5%;
+      }
+      .box2 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40%;
+      }
+    }
+    .row2 {
+      display: flex;
+      flex-direction: column;
+      .box1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 60%;
+        margin-bottom: 5%;
+      }
+      .box2 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10%;
+      }
+      #number {
+        margin-right: 55%;
+      }
+    }
+    .row3 {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      margin-left: 3%;
+    }
+  }
+  #adress {
+    margin-left: 8%;
+  }
+  #button {
+    margin-left: 20%;
+    margin-bottom: 5%;
+  }
+  h5 {
+    margin-left: -80px;
+  }
+  #email {
+    margin-left: -120px;
+  }
+  #number {
+    margin-left: -40px;
+  }
+  .brochures {
+    flex-wrap: wrap;
+  }
+  .download-btn {
+    margin-top: 10px;
+  }
+}
