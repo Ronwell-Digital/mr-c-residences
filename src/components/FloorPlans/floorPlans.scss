@@ -1,5 +1,9 @@
 .floor-plans {
   padding: 130px 0;
+  p,
+  h2 {
+    overflow-wrap: unset;
+  }
   .floor-plans__title {
     text-align: center;
     font-family: Montserrat;
