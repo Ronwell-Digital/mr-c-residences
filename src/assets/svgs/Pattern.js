@@ -1,7 +1,7 @@
-export default function Pattern() {
+export default function Pattern(props) {
   // opacity: "1"
   return (
-    <div className="pattern">
+    <div className="pattern" style={props.style}>
       <svg
         width="1920"
         height="769"

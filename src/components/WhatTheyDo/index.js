@@ -1,35 +1,111 @@
 import "./whatTheyDo.scss";
+import {
+  ArtInvesment,
+  Eventplanning,
+  Exclusive,
+  Privatemember,
+  Privatestaff,
+  Restaurant,
+  Transportlogistics,
+  Travel,
+  Wellness,
+} from "../../assets/images/WhatTheyDo";
+import Container from "../Container";
+import { Carousel } from "@trendyol-js/react-carousel";
+
 export default function WhatTheyDo() {
-  const leftClick = () => {};
+  const leftClick = () => {
+    const slider = document.querySelector(".slider");
+    slider.style.left = slider.offsetLeft - 300 + "px";
+    slider.style.animation = "fadeOutLeft 250ms";
+  };
   const rightClick = () => {
-    console.log("right click");
-    let elem = document.querySelector(".right-side");
-    elem.style.left = elem.style.left + 10 + "px";
+    const slider = document.querySelector(".slider");
+    slider.style.left = slider.offsetLeft + 300 + "px";
   };
   return (
     <div className="whatTheyDo">
-      <div className="left-side">
-        <div className="header-title-wrapper ">
-          <h1 className="title">What They Do</h1>
-          <span className="line"></span>
+      <Container style={{ position: "relative", display: "flex" }}>
+        <div className="left-side">
+          <div className="header-title-wrapper ">
+            <h1 className="title">What They Do</h1>
+            <span className="line"></span>
+          </div>
+          <p className="text">
+            Your Private
+            <br /> Office can <br />
+            organize:
+          </p>
+          <button onClick={() => leftClick()}>left</button>
+          <button onClick={() => rightClick()}>right</button>
         </div>
-        <p className="text"> Your Private Office can organize:</p>
-        <button onClick={() => leftClick()}>left</button>
-        <button onClick={() => rightClick()}>right</button>
-      </div>
-      <div className="right-side">
-        <div className="item"> item 1 </div>
-        <div className="item"> item 2 </div>
-        <div className="item"> item 3 </div>
-        <div className="item"> item 4 </div>
-        <div className="item"> item 5 </div>
-        <div className="item"> item 7 </div>
-        <div className="item"> item 2 </div>
-        <div className="item"> item 3 </div>
-        <div className="item"> item 4 </div>
-        <div className="item"> item 5 </div>
-        <div className="item"> item 7 </div>
-      </div>
+        <div className="right-side">
+          <div className="slider">
+            <div className="item"></div>
+            {items.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  id={"item" + index}
+                  className="item"
+                  style={{
+                    backgroundImage: ` 
+                linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 33.91%),
+                url(${item.image})`,
+                  }}
+                ></div>
+              );
+            })}
+          </div>
+        </div>
+      </Container>
     </div>
   );
 }
+const items = [
+  {
+    image: Travel,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: Transportlogistics,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: Eventplanning,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: Wellness,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: Restaurant,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: Privatestaff,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: ArtInvesment,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: Privatemember,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+  {
+    image: Exclusive,
+    title: "ddfgdfgdfg",
+    description: "descriptiondescription description description ",
+  },
+];

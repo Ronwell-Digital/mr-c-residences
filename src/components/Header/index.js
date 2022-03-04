@@ -20,6 +20,7 @@ export default function Header() {
       }, 10);
     };
   }, []);
+
   useEffect(() => {
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector(".nav");

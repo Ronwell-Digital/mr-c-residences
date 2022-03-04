@@ -1,5 +1,5 @@
 .whatTheyDo {
-  padding: 162px 0 162px 300px;
+  padding: 50px 0;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -30,22 +30,32 @@
     flex: 1;
   }
   .right-side {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 50%;
 
+    position: relative;
     flex: 2;
     display: flex;
-    //overflow: scroll;
+    overflow: hidden;
     border: 1px solid rebeccapurple;
+    .slider {
+      display: flex;
+      height: 100%;
+      position: relative;
+      left: 0;
+      transition: 250ms;
+    }
     .item {
       position: relative;
-
-      min-width: 300px;
+      flex: 1;
+      width: 300px;
+      max-width: 300px;
       border: 1px solid darkblue;
     }
   }
+
   .line {
     width: 30%;
   }
@@ -53,4 +63,17 @@
     position: relative;
     z-index: 2;
   }
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
 }

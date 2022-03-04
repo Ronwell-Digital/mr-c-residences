@@ -11,12 +11,13 @@ function App() {
     <div>
       <Header />
       <Hero></Hero>
-      {/* <WhatTheyDo /> */}
-      {/* <DownloadBrochure /> */}
-      {/* <MobileAssistant /> */}
       <Divider />
-      {/* <FloorPlans /> */}
-      {/* <DownloadBrochure /> */}
+      <WhatTheyDo />
+      <DownloadBrochure />
+      <MobileAssistant />
+      <Divider />
+      <FloorPlans />
+      <DownloadBrochure />
     </div>
   );
 }
