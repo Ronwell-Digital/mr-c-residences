@@ -7,7 +7,7 @@ const PaymentTerms = () => {
     return (
         <div className="payment-terms">
             <section id="conference-timeline">
-                <a href="/"><img src={payment}></img></a>
+                <a href="#contact"><img src={payment}></img></a>
             </section>
             <div className="download-brochure">
                 <button>Download</button>
