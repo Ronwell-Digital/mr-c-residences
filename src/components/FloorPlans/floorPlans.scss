@@ -147,6 +147,12 @@
 
   .float-wrapper {
     overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+      -webkit-appearance: none;
+    }
   }
 }
 .magic-line {
@@ -166,11 +172,12 @@
       scrollbar-width: none; /* Firefox */
       left: 0;
       transform: unset;
+      &::-webkit-scrollbar {
+        display: none;
+        -webkit-appearance: none;
+      }
     }
-    &::-webkit-scrollbar {
-      display: none;
-      -webkit-appearance: none;
-    }
+
     .floor-plans__content__item__submenu__content {
       flex-direction: column;
       justify-content: center;

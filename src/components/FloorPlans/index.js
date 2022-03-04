@@ -68,8 +68,8 @@ export default function FloorPlans() {
     });
 
     document.querySelector(".floor-plans__content").style.width =
-      parseInt(sum.toString().split(".")[0], 10) + 1 + "px";
-  }, [isMobile]);
+      parseInt(sum.toString().split(".")[0], 10) + 20 + "px";
+  }, [width]);
   useEffect(() => {
     try {
       const floorPlanSubmenu = document.querySelectorAll(
