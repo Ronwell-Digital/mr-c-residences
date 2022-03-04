@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Container from "../Container";
 import "./floorPlans.scss";
 import {
@@ -13,10 +13,21 @@ import {
   TownHouseTerrace1,
   TownHouseTerrace2,
 } from "../../assets/images/FloorPlans";
-
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
 export default function FloorPlans() {
-  const [active, setActive] = useState(0);
-  const [deviceWidth, setDeviceWidth] = useState(window.innerWidth);
+  const [width, height] = useWindowSize();
+  const [isMobile, setIsMobile] = useState(width < 768);
   const toggleHandler = (index) => {
     try {
       const floorPlanSubmenu = document.querySelectorAll(
@@ -51,14 +62,14 @@ export default function FloorPlans() {
     var childContainer = document.querySelectorAll(
       ".floor-plans__content__item"
     );
-    console.log(childContainer);
+
     childContainer.forEach((el) => {
       sum += el.getBoundingClientRect().width;
     });
 
     document.querySelector(".floor-plans__content").style.width =
-      parseInt(sum.toString().split(".")[0], 10) + 1 + "px";
-  }, [deviceWidth]);
+      parseInt(sum.toString().split(".")[0], 10) + 20 + "px";
+  }, [width]);
   useEffect(() => {
     try {
       const floorPlanSubmenu = document.querySelectorAll(
@@ -77,7 +88,7 @@ export default function FloorPlans() {
     magicLine.style.width = window
       .getComputedStyle(activeTitle)
       .getPropertyValue("width");
-  }, [deviceWidth]);
+  }, [isMobile]);
   return (
     <div className="floor-plans">
       <Container style={{ display: "flex", flexDirection: "column" }}>

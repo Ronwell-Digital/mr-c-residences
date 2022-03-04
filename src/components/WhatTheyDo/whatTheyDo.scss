@@ -1,7 +1,5 @@
-.whatTheyDo {
-  padding: 50px 0;
-  display: flex;
-  position: relative;
+.what-they-do {
+  padding: 8rem 0;
   overflow: hidden;
   .title {
     font-family: Montserrat;
@@ -26,54 +24,221 @@
     color: #452129;
     padding: 40px 0;
   }
-  .left-side {
-    flex: 1;
+  .what-they-do-slider {
+    height: 100%;
   }
-  .right-side {
-    // position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 50%;
-
-    position: relative;
-    flex: 2;
+  .what-they-do-header {
+    min-width: 400px;
     display: flex;
-    overflow: hidden;
-    border: 1px solid rebeccapurple;
-    .slider {
-      display: flex;
-      height: 100%;
-      position: relative;
-      left: 0;
-      transition: 250ms;
-    }
-    .item {
-      position: relative;
-      flex: 1;
-      width: 300px;
-      max-width: 300px;
-      border: 1px solid darkblue;
-    }
+    flex-direction: column;
+    justify-content: center;
   }
-
-  .line {
-    width: 30%;
-  }
-  button {
+  .what-they-do-header,
+  .carousel-wrapper,
+  .styles-module_carousel-base__3keqD {
+    flex: 1;
     position: relative;
-    z-index: 2;
   }
-}
-@keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+  .styles-module_carousel-base__3keqD {
+    left: 10%;
+    div {
+      border-radius: 8px;
+      height: 100%;
+      min-height: 700px;
+    }
+    & > div:nth-child(3),
+    & > div:nth-child(1) {
+      position: absolute;
 
-.fadeOutLeft {
-  -webkit-animation-name: fadeOutLeft;
-  animation-name: fadeOutLeft;
+      bottom: 0;
+      display: flex;
+      align-items: flex-end;
+    }
+    & > div:nth-child(3) {
+      left: -80px;
+    }
+    & > div:nth-child(1) {
+      left: -150px;
+    }
+  }
+  .left-button {
+    transform: rotate(180deg);
+  }
+  .custom-button {
+    border: none;
+    margin: 0;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .mapped-item {
+    background-repeat: no-repeat;
+  }
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    align-content: center;
+    padding: 3rem 1.5rem;
+  }
+  .item-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+    color: #ffffff;
+  }
+
+  .item-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+
+    color: #ffffff;
+  }
+  .item-title {
+    padding: 1rem 0;
+  }
+  .item-title,
+  .item-text {
+    // padding: 1rem 2rem;
+  }
 }
+@media (max-width: 768px) {
+  .what-they-do {
+    padding: 35px 0;
+    .mycontainer {
+      display: block;
+    }
+    .mapped-item {
+      background-size: fixed;
+    }
+    .text {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 61px;
+
+      color: #452129;
+    }
+    .styles-module_carousel-base__3keqD {
+      div {
+        height: 100%;
+        min-height: 450px;
+      }
+    }
+    .styles-module_carousel-base__3keqD {
+      & > div:nth-child(3) {
+        left: 0;
+        top: -100%;
+        right: 0;
+        z-index: 4;
+        margin-left: 60px;
+      }
+      & > div:nth-child(1) {
+        left: 0;
+        top: -100%;
+        right: 0;
+        z-index: 4;
+      }
+      & > div:nth-child(1),
+      & > div:nth-child(3) {
+        padding: 15px 0;
+      }
+    }
+  }
+}
+@media (min-width: 769px) {
+  .what-they-do {
+    .mapped-item {
+      background-size: unset;
+    }
+  }
+}
+// .whatTheyDo {
+//   padding: 50px 0;
+//   display: flex;
+//   position: relative;
+//   overflow: hidden;
+//   .title {
+//     font-family: Montserrat;
+//     font-style: normal;
+//     font-weight: bold;
+//     font-size: 24px;
+//     line-height: 29px;
+
+//     letter-spacing: 0.5em;
+
+//     color: #cfa87a;
+//     text-transform: uppercase;
+//     padding: 24px 0;
+//   }
+//   .text {
+//     font-family: Montserrat;
+//     font-style: normal;
+//     font-weight: bold;
+//     font-size: 64px;
+//     line-height: 78px;
+
+//     color: #452129;
+//     padding: 40px 0;
+//   }
+//   .left-side {
+//     flex: 1;
+//   }
+//   .right-side {
+//     // position: absolute;
+//     // top: 0;
+//     // bottom: 0;
+//     // left: 50%;
+
+//     position: relative;
+//     flex: 2;
+//     display: flex;
+//     overflow: hidden;
+//     border: 1px solid rebeccapurple;
+//     .slider {
+//       display: flex;
+//       height: 100%;
+//       position: relative;
+//       left: 0;
+//       transition: 250ms;
+//     }
+//     .item {
+//       position: relative;
+//       flex: 1;
+//       width: 300px;
+//       max-width: 300px;
+//       border: 1px solid darkblue;
+//     }
+//   }
+
+//   .line {
+//     width: 30%;
+//   }
+//   button {
+//     position: relative;
+//     z-index: 2;
+//   }
+// }
+// @keyframes fadeOutLeft {
+//   0% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// .fadeOutLeft {
+//   -webkit-animation-name: fadeOutLeft;
+//   animation-name: fadeOutLeft;
+// }
