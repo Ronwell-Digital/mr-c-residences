@@ -1,11 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Logo from "../../assets/brandlogo/logo";
 import Instagram from "../../assets/svgs/Instagram";
 import Container from "../Container";
 import "./header.scss";
 import MrcMan from "../../assets/svgs/biggerMrc.svg";
 let timeout;
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
+
 export default function Header() {
+  const [width, height] = useWindowSize();
+
   useEffect(() => {
     window.onscroll = () => {
       if (timeout) {
@@ -29,7 +44,12 @@ export default function Header() {
       hamburger.classList.toggle("active");
 
       nav.classList.toggle("active");
-      nav.style.backgroundImage = `url(${MrcMan})`;
+
+      if (nav.classList.contains("active")) {
+        nav.style.backgroundImage = `url(${MrcMan})`;
+      } else {
+        nav.style.backgroundImage = "none";
+      }
     }
 
     hamburger.addEventListener("click", mobileMenu);
