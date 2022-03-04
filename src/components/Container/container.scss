@@ -1,0 +1,44 @@
+@import "../../assets/cssHelpers/variables";
+.mycontainer {
+  margin: 0 auto;
+  // position: relative;
+  // left: 50%;
+  // transform: translateX(-50%);
+}
+
+@media (min-width: $xs) {
+  .mycontainer {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $sm) {
+  .mycontainer {
+    max-width: 720px;
+    padding: 0 1rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $md) {
+  .mycontainer {
+    max-width: 960px;
+    padding: 0 1rem;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: $lg) {
+  .mycontainer {
+    max-width: 1140px;
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: $xxl) {
+  .mycontainer {
+    max-width: 1320px;
+  }
+}

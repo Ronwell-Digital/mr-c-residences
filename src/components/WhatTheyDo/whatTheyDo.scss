@@ -1,0 +1,79 @@
+.whatTheyDo {
+  padding: 50px 0;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    letter-spacing: 0.5em;
+
+    color: #cfa87a;
+    text-transform: uppercase;
+    padding: 24px 0;
+  }
+  .text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 78px;
+
+    color: #452129;
+    padding: 40px 0;
+  }
+  .left-side {
+    flex: 1;
+  }
+  .right-side {
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 50%;
+
+    position: relative;
+    flex: 2;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid rebeccapurple;
+    .slider {
+      display: flex;
+      height: 100%;
+      position: relative;
+      left: 0;
+      transition: 250ms;
+    }
+    .item {
+      position: relative;
+      flex: 1;
+      width: 300px;
+      max-width: 300px;
+      border: 1px solid darkblue;
+    }
+  }
+
+  .line {
+    width: 30%;
+  }
+  button {
+    position: relative;
+    z-index: 2;
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}

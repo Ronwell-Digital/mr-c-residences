@@ -1,0 +1,18 @@
+.divider-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+
+  .divider-line {
+    display: block;
+    height: 2px;
+    width: 50%;
+    background-color: #eaeaea;
+  }
+  svg {
+    margin: 0 20px;
+  }
+}
