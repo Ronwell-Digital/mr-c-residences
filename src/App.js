@@ -6,7 +6,7 @@ import MobileAssistant from "./components/MobileAssistant";
 import Divider from "./components/Divider";
 import FloorPlans from "./components/FloorPlans";
 import Hero from "./components/Hero";
-import PaymentTerms from "./components/Payment Terms/PaymentTerms";
+import PaymentTerms from "./components/PaymentTerms/PaymentTerms";
 import Inspiration from "./components/Inspiration/Inspiration";
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
