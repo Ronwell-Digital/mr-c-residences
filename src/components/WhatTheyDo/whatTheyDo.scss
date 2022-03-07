@@ -140,18 +140,19 @@
         left: 0;
         top: -100%;
         right: 0;
-        z-index: 4;
+
         margin-left: 60px;
       }
       & > div:nth-child(1) {
         left: 0;
         top: -100%;
         right: 0;
-        z-index: 4;
       }
       & > div:nth-child(1),
       & > div:nth-child(3) {
         padding: 15px 0;
+        width: 38px;
+        height: 34px;
       }
     }
   }
@@ -159,7 +160,7 @@
 @media (min-width: 769px) {
   .what-they-do {
     .mapped-item {
-      background-size: unset;
+      background-size: cover;
     }
   }
 }

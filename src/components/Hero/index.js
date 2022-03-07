@@ -10,9 +10,9 @@ export default function Hero({ children }) {
   useEffect(() => {
     let el = document.querySelector(".hero-area");
 
-    document.querySelector(".heroimg").style.height = window
-      .getComputedStyle(el)
-      .getPropertyValue("height");
+    // document.querySelector(".heroimg").style.height = window
+    //   .getComputedStyle(el)
+    //   .getPropertyValue("height");
   }, []);
   return (
     <div className="hero-area">

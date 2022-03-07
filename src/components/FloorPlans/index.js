@@ -27,7 +27,9 @@ function useWindowSize() {
 }
 export default function FloorPlans() {
   const [width, height] = useWindowSize();
-  const [isMobile, setIsMobile] = useState(width < 768);
+  useEffect(() => {
+    console.log(width);
+  }, [width]);
   const toggleHandler = (index) => {
     try {
       const floorPlanSubmenu = document.querySelectorAll(
@@ -58,17 +60,21 @@ export default function FloorPlans() {
   };
 
   useEffect(() => {
-    var sum = 0;
-    var childContainer = document.querySelectorAll(
-      ".floor-plans__content__item"
-    );
+    if (width > 0) {
+      try {
+        var sum = 0;
+        var childContainer = document.querySelectorAll(
+          ".floor-plans__content__item"
+        );
 
-    childContainer.forEach((el) => {
-      sum += el.getBoundingClientRect().width;
-    });
+        childContainer.forEach((el) => {
+          sum += el.getBoundingClientRect().width;
+        });
 
-    document.querySelector(".floor-plans__content").style.width =
-      parseInt(sum.toString().split(".")[0], 10) + 20 + "px";
+        document.querySelector(".floor-plans__content").style.width =
+          parseInt(sum.toString().split(".")[0], 10) + 20 + "px";
+      } catch (e) {}
+    }
   }, [width]);
   useEffect(() => {
     try {
@@ -81,14 +87,14 @@ export default function FloorPlans() {
       );
       contentItem[0].classList.add("active-title");
     } catch (e) {}
-  }, []);
+  }, [width]);
   useEffect(() => {
     let magicLine = document.querySelector(".magic-line");
     let activeTitle = document.querySelector(".active-title");
     magicLine.style.width = window
       .getComputedStyle(activeTitle)
       .getPropertyValue("width");
-  }, [isMobile]);
+  }, [width]);
   return (
     <div className="floor-plans">
       <Container style={{ display: "flex", flexDirection: "column" }}>

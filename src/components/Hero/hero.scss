@@ -2,6 +2,9 @@
   width: 100%;
   position: relative;
 }
+.heroimg {
+  background-size: unset;
+}
 .hero-content {
   position: relative;
   top: 30%;
@@ -33,5 +36,15 @@
     letter-spacing: 0.15em;
 
     color: #ffffff;
+  }
+}
+@media (max-width: 576px) {
+  .hero-text {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .heroimg {
+    background-size: cover;
   }
 }

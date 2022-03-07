@@ -70,15 +70,50 @@ export default function Header() {
             <ul className="nav-list">
               {headerNav.map((item, index) => {
                 return (
-                  <li key={index} className="nav-item">
+                  <li
+                    key={index}
+                    className="nav-item"
+                    onClick={function () {
+                      const bodyRect =
+                        document.body.getBoundingClientRect().top;
+                      const elementRect = document
+                        .querySelector(`.${item.to}`)
+                        .getBoundingClientRect().top;
+                      const elementPosition = elementRect - bodyRect;
+                      const offsetPosition =
+                        elementPosition -
+                        document.querySelector(".header").offsetHeight;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth",
+                      });
+                    }}
+                  >
                     <a className="nav-title">{item.title}</a>
                   </li>
                 );
               })}
+              <button
+                className="btn"
+                onClick={function () {
+                  const bodyRect = document.body.getBoundingClientRect().top;
+                  const elementRect = document
+                    .querySelector(`.contact`)
+                    .getBoundingClientRect().top;
+                  const elementPosition = elementRect - bodyRect;
+                  const offsetPosition =
+                    elementPosition -
+                    document.querySelector(".header").offsetHeight;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                <span>BROCHURE</span>
+              </button>
             </ul>
-            <button className="btn">
-              <span>BROCHURE</span>
-            </button>
+
             <Instagram className="instagram" />
           </nav>
 
@@ -93,8 +128,8 @@ export default function Header() {
   );
 }
 const headerNav = [
-  { title: "about" },
-  { title: "residences" },
-  { title: "inspiration" },
-  { title: "contact" },
+  { title: "about", to: "about" },
+  { title: "residences", to: "floor-plans" },
+  { title: "inspiration", to: "inspiration" },
+  { title: "contact", to: "contact" },
 ];

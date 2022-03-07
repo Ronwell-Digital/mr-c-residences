@@ -13,7 +13,7 @@ import {
 import Container from "../Container";
 import { Carousel } from "@trendyol-js/react-carousel";
 import Arrow from "../../assets/svgs/Arrow";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
@@ -28,6 +28,14 @@ function useWindowSize() {
 }
 export default function WhatTheyDo() {
   const [width, height] = useWindowSize();
+  const [carouselItems, setCarouselItems] = useState(2.5);
+  useEffect(() => {
+    if (width <= 576) {
+      setCarouselItems(1.5);
+    } else {
+      setCarouselItems(2.5);
+    }
+  }, [width]);
   return (
     <div className="what-they-do">
       <Container
@@ -50,7 +58,7 @@ export default function WhatTheyDo() {
         </div>
 
         <Carousel
-          show={width <= 576 ? 1.5 : 2.5}
+          show={carouselItems}
           slide={1}
           transition={0.5}
           leftArrow={
