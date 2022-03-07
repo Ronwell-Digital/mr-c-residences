@@ -1,17 +1,17 @@
 import "./App.css";
-import Header from "./Components/Header";
-import WhatTheyDo from "./Components/WhatTheyDo";
-import DownloadBrochure from "./Components/DownloadBrochure";
-import MobileAssistant from "./Components/MobileAssistant";
-import Divider from "./Components/Divider";
-import FloorPlans from "./Components/FloorPlans";
-import Hero from "./Components/Hero";
-import PaymentTerms from "./Components/PaymentTerms/PaymentTerms";
-import Inspiration from "./Components/Inspiration/Inspiration";
-import Gallery from "./Components/Gallery/Gallery";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
-import BottomFooter from "./Components/Footer/BottomFooter";
+import Header from "./components/Header";
+import WhatTheyDo from "./components/WhatTheyDo";
+import DownloadBrochure from "./components/DownloadBrochure";
+import MobileAssistant from "./components/MobileAssistant";
+import Divider from "./components/Divider";
+import FloorPlans from "./components/FloorPlans";
+import Hero from "./components/Hero";
+import PaymentTerms from "./components/PaymentTerms/PaymentTerms";
+import Inspiration from "./components/Inspiration/Inspiration";
+import Gallery from "./components/Gallery/Gallery";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import BottomFooter from "./components/Footer/BottomFooter";
 
 function App() {
   return (
