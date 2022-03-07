@@ -1,16 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import HomePattern from "../../assets/svgs/HomePattern";
 import MrcMan from "../../assets/svgs/MrcMan";
 import Container from "../Container";
 import LeftContainer from "../LeftContainer";
 import "./about.scss";
-export default function About() {
-  //          height: "815px",
-
-  useEffect(() => {
-    if (window.innerWidth <= 768) {
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
     }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
   }, []);
+  return size;
+}
+
+export default function About() {
+  const [width, height] = useWindowSize();
+
   return (
     <div className="about">
       <HomePattern
