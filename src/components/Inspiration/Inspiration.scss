@@ -129,27 +129,26 @@
   .inspiration-top {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    margin-left: 0%;
     .card {
       img {
         max-width: 100%;
       }
-      h5 {
-        margin-left: 2%;
-        font-size: 12px;
+      h6 {
       }
   }
   }
   .inspiration-bottom {
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
+
     .card {
       img {
-        max-width: 40%;
+        max-width: 45%;
       }
-      h5{
-        margin-right: 10%;
+      h6{
+        max-width: 30%;
+        margin-bottom: 5%;
       }
     }
   }
